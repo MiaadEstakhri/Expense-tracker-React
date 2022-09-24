@@ -1,0 +1,131 @@
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Montserrat;
+  padding-top: 30px;
+  background-color: #f6f6f6;
+  color: #0d1d2c;
+}
+
+.container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.topSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.resultSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expenseBox {
+  width: 132px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.expenseBox span {
+  font-weight: bold;
+  color: #008000;
+}
+
+.btn {
+  outline: none;
+  color: #6d289d;
+  background: #ede9fe;
+  padding: 5px 10px;
+  border: 1px solid #6d289d;
+  border-radius: 5px;
+}
+
+.cancel {
+  background: #ffffff;
+  color: #dc2626;
+  border: 1px solid #dc2626;
+}
+
+.primary {
+  background-color: #6d289d;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 170px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+input {
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 7px 12px;
+  border-radius: 5px;
+}
+
+input[type="radio"] {
+  margin-left: 10px;
+}
+
+.radioBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+}
+
+.radioBox label {
+  margin-left: 3px;
+  font-size: 13px;
+}
+
+.transaction {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f4f4f5;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 15px;
+  border-right: 4px solid #008000;
+  font-weight: bold;
+}
+
+.search{
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 5px;
+  background-color: #efefef;
+  border: 1px solid #ccc;
+  margin: 20px 0;
+}
