@@ -20,11 +20,11 @@ const TransActionComponent = ({ transactions }) => {
     filterTransaction(e.target.value);
   };
 
-  const removeHandler = (id) => {
-    const filter = transactions.filter((p) => p.id !== id);
-    setFilteredTnx(filter);
-    console.log(filter);
-  };
+  // const removeHandler = (id) => {
+  //   const filter = transactions.filter((p) => p.id !== id);
+  //   setFilteredTnx(filter);
+  //   console.log(filter);
+  // };
 
   useEffect(() => {
     filterTransaction(searchItem);
@@ -51,7 +51,7 @@ const TransActionComponent = ({ transactions }) => {
             >
               <span>{t.desc}</span>
               <span>$ {t.amount}</span>
-              <button onClick={removeHandler}>delete</button>
+              {/* <button onClick={removeHandler}>delete</button> */}
             </div>
           ))
         : "No item match!"}
