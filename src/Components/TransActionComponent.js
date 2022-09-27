@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const TransActionComponent = ({ transactions }) => {
+const TransActionComponent = ({transactions,onClick}) => {
   const [searchItem, setSearchItem] = useState("");
   const [filteredTnx, setFilteredTnx] = useState(transactions);
 
@@ -20,15 +20,17 @@ const TransActionComponent = ({ transactions }) => {
     filterTransaction(e.target.value);
   };
 
-  // const removeHandler = (id) => {
-  //   const filter = transactions.filter((p) => p.id !== id);
-  //   setFilteredTnx(filter);
-  //   console.log(filter);
-  // };
+  const removeHandler = (id) => {
+    const remove = filteredTnx.filter((t) => t.id !== id);
+    setFilteredTnx(remove);
+    console.log(id);
+  };
 
   useEffect(() => {
     filterTransaction(searchItem);
-   
+    return () => {
+      removeHandler(searchItem);
+    };
   }, [transactions]);
 
   if (!transactions.length) return <h3>add some transaction</h3>;
@@ -50,8 +52,10 @@ const TransActionComponent = ({ transactions }) => {
               style={{ borderRight: t.type === "expense" && "4px solid red" }}
             >
               <span>{t.desc}</span>
-              <span>$ {t.amount}</span>
-              {/* <button onClick={removeHandler}>delete</button> */}
+              <span>{t.amount}$</span>
+              <button className="btn" onClick={() => onClick(t.id)}>
+                delete
+              </button>
             </div>
           ))
         : "No item match!"}
